@@ -1,0 +1,16 @@
+name: 'AirTable Package Reporting'
+description: 'Get consistent information about the package versions installed on each environment.'
+inputs:
+  project:
+    description: 'Project Code'
+    required: true
+  environment:
+    description: 'Environment'
+    required: true
+  composer-file:
+    description: 'Location of composer.lock'
+    required: false
+    default: './composer.lock'
+runs:
+  using: 'node16'
+  main: 'dist/index.mjs'

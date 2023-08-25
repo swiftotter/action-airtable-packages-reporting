@@ -1,0 +1,15 @@
+{
+  "name": "action-airtable-packages-reporting",
+  "version": "0.0.1",
+  "description": "Github Action for Package Reporting to Airtable",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "action": "node dist/index.mjs"
+  },
+  "author": "Łukasz Bajsarowicz <lukasz@swiftotter.com>",
+  "license": "Proprietary",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "airtable": "^0.12.2"
+  }
+}
