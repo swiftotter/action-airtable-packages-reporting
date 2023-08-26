@@ -61,6 +61,8 @@ function insertComposerPackages(project, environment, composerPackages, dev = fa
         };
     });
 
+    console.debug('Adding '+ packagesToAdd.length + dev ? ' dev' : '' + ' packages');
+
     for (let i = 0; i < packagesToAdd.length; i += chunkSize) {
         const chunk = packagesToAdd.slice(i, i + chunkSize);
 
@@ -71,10 +73,10 @@ function insertComposerPackages(project, environment, composerPackages, dev = fa
                 console.error(err);
                 return 1;
             }
-
-            console.log('Added', records.length)
         })
     }
+
+
 }
 
 try {
